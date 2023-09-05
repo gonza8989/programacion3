@@ -4,16 +4,24 @@ def jugar():
     print ("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
     
     palabra_secreta = "mandarina"
+    letras_acertadas =['','','','','','','','','_',]
     
     ahorcado = False
     acerto = False
     
+    print(letras_acertadas)
     while(not ahorcado and not acerto):
-        entrada = input('ingresar una letra ...')
+        entrada = input('Ingrese una letra ...')
+        entrada = entrada.strip()
+        entrada = entrada.lower()
+        indice = 0
         for letra in palabra_secreta:
             if(entrada == letra):
-                print(entrada)
-        
+                letras_acertadas[indice] = letra
+                
+            indice = indice +1
+        print(letras_acertadas)
+        print('jugando....')
         
     print("Fin del juego")
     

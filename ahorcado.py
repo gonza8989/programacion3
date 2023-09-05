@@ -1,29 +1,29 @@
 def jugar():
-    print ("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
-    print ("Bienvenido al juego del ahorcado")
-    print ("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
     
-    palabra_secreta = "mandarina"
-    letras_acertadas =['','','','','','','','','_',]
+    print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
+    print("Bienvenido al juego del ahorcado")
+    print("°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°")
+    
+    palabera_secreta = 'mandarina'
     
     ahorcado = False
     acerto = False
     
-    print(letras_acertadas)
     while(not ahorcado and not acerto):
-        entrada = input('Ingrese una letra ...')
+        entrada = input('ingrese ina letra....')
         entrada = entrada.strip()
         entrada = entrada.lower()
         indice = 0
-        for letra in palabra_secreta:
-            if(entrada == letra):
-                letras_acertadas[indice] = letra
-                
-            indice = indice +1
-        print(letras_acertadas)
-        print('jugando....')
         
-    print("Fin del juego")
-    
-if(__name__ == "__main__"):
+        for letra in palabera_secreta:
+            if(entrada == letra):
+                print('se encontro la letra {} en la posicion {}'.format(letra,indice))
+
+                indice = indice + 1
+
+        print('jugando ....')
+
+    print('fin del juego.....')
+
+if (__name__ == '__main__'):
     jugar()
